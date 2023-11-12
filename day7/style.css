@@ -90,7 +90,6 @@ i {
   left: 46px;
 }
 
-
 .line-2__asd-bar {
   height: 3px;
   width: 28px;
@@ -105,83 +104,52 @@ h1 {
   font-weight: 600;
 }
 
-.fa-magnifying-glass {
+.notification-board {
   display: flex;
-  font-size: 19px;
+  flex-direction: row;
 }
 
-
-.circle-1__asd-ntc {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  border: solid 2.9px var(--nav-blue);
-  outline: solid 2px #fff;
-  top: 22px;
-  left: 46px;
+.left-board {
+  width: 3.5px;
+  height: 238.3px;
+  background-color: #ddd;
+  margin-left: 22px;
 }
 
-.circle-2__asd-ntc {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  border: solid 2.9px var(--nav-blue);
-  outline: solid 2px #fff;
-  top: 22px;
-  left: 46px;
+.right-board span {
+  font-size: 12px;
 }
 
-.circle-3__asd-ntc {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  border: solid 2.9px var(--nav-blue);
-  outline: solid 2px #fff;
-  top: 22px;
-  left: 46px;
-}
-
-.notificatiton-board {
-  display: grid;
-  grid-template-columns: 0.9fr 6fr;
-}
-
-.aside__notifications {
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-  background-color: #3e3e3e;
-}
-
-.large-bar__asd-ntc {
-  height: 238px;
-  width: 3px;
-  background-color: #000;
-  position: absolute;
-  display: flex;
-}
-
-.notifications {
+.right-board {
+  color: #666;
+  font-size: 15.5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 36px 20px 8px;
+  padding: 24px 20px 24px 14px;
 }
 
-h3 {
-  font-size: 12px;
-  font-weight: 200;
-  color: #535353;
+.notification {
+  display: flex;
+  flex-direction: row;
 }
 
-h2 {
-  font-size: 14.3px;
-  color: #535353;
-  font-weight: 500;
+.notification::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 3px solid var(--nav-blue);
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 17px;
+  margin-top: 3px;
+  box-shadow: 0px 0px 0px 3px rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(255,255,255,1);
 }
 
 aside {
   display: none;
 }
-
-/*NO LLEVA GRID, EN LA ANIMACION LOS CIRCULOS Y LAS NOTIS SE MUEVEN A LA PAR POR LO TANTO IRIA EN UN MISMO ESPACIO*/
