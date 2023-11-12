@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #786450;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: rgb(238,189,108);
+  background: linear-gradient(220deg, rgba(238,189,108,1) 0%, rgba(203,126,79,1) 100%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+  -moz-box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+  box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+
+/*HACER UN GRID PARA EL LADO DERECHO E IZQUIERDO Y LUEGO EN EL LADO DERECHO ESTRUCTURAR OTRO GRID PARA LOS 3 BLOQUES*/
+
+.left-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.image {
+  margin: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image {
+  background-image: url(https://100dayscss.com/codepen/jessica-potter.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin-top: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  top: -6px;
+  left: -6px;
+  border: 1.34px solid;
+  border-color: #786450 transparent #786450 #786450;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.image:hover::before {
+  transform: rotateZ(360deg);
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -2.3px;
+  left: -3px;
+  border: 1.34px solid;
+  border-color: #786450 transparent #786450 transparent;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.image:hover::after {
+  transform: rotateZ(-360deg);
+}
+
+
+h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 16px 0 2px 0;
+  color: rgba(120, 100, 80, 0.83);
+}
+
+button {
+  display: flexbox;
+  background: none;
+  border: 1.5px solid #786450;
+  width: 120px;
+  height: 32px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #786450dc;
+  margin-top: 10px;
+  transition: all .4s ease-in-out;
+}
+button:hover {
+  color: #fff;
+  background-color: #786450dc;
+}
+
+@keyframes button-animation {
+  0% { color: #786450dc; }
+  100% { color: #fff; background-color: #786450dc; }
+}
+
+.buttons {
+  margin-top: 28px;
+}
+
+
+.right-section {
+  background-color: #fff;
+  display: grid;
+  grid-row: repeat(3, 1fr);
+  grid-gap: 1px;
+}
+
+.grid-right {
+  background-color: #f5e8df;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.grid-right:hover {
+  color: white;
+  background-color: #e1cfc2;
+}
+
+.block-container {
+  display: block;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 10px;
+  color: rgba(120, 100, 80, 0.712);
+}
+
+h3 {
+  font-weight: 600;
+  color: rgba(120, 100, 80, 0.932);
+}

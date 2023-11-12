@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.frame {
+    background: #272c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+    aspect-ratio: 1/1;
+    width: 20vh;
+    border-radius: 50%;
+    background-color: #75cfeb;
+
+    position: relative;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: hide 3.5s linear infinite;
+}
+
+@keyframes hide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.floor {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #dece6f;
+    top: 64.9%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    height: 100%;
+    width: 150%;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    clip-path: polygon(15% 0, 100% 20%, 85% 0);
+    animation: shadow 3.5s linear infinite;
+}
+
+@keyframes shadow {
+    0% { clip-path: polygon(15% 0, 100% 20%, 85% 0); }
+    30% { clip-path: polygon(15% 0, 100% 40%, 85% 0); }
+    50% { clip-path: polygon(15% 0, 100% 40%, 85% 0); }
+    100% { clip-path: polygon(15% 0, 0% 50%, 84% 0); }
+}
+
+.piramide {
+    position: absolute;
+    height: 30%;
+    width: 70%;
+    display: flex;
+}
+
+.zoneA {
+    height: 100%;
+    width: 70%;
+    background-color: #f0f0f0;
+    clip-path: polygon(79% 0, 0% 100%, 100% 100%);
+    position: absolute;
+    z-index: 10;
+    animation: changeA 3.5s linear infinite;
+}
+
+@keyframes changeA {
+    0% { background-color: #c3c1c3; }
+    30% { background-color: #dadada; }
+    70% { background-color: #dadada; }
+    100% { background-color: #919191; }
+}
+
+.zoneB {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background-color: #c3c1c3;
+    clip-path: polygon(36% 0, 0% 100%, 100% 100%);
+    left: 30%;
+    animation: changeB 3.5s linear infinite;
+}
+
+@keyframes changeB {
+    0% { background-color: #919191; }    
+    30% { background-color: #c3c1c3; }
+    50% { background-color: #c3c1c3; }
+    100% { background-color: #e0e0e0; }
+}
+
+.backsun { 
+    position: absolute;
+    height: 170%;
+    width: 170%;
+    top: 40%;
+    transform: rotate(0deg);
+    animation: rotate 3.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotateZ(0deg); }
+    30% { transform: rotateZ(30deg); }
+    50% { transform: rotateZ(30deg); }
+    100% { transform: rotateZ(90deg); }
+}
+
+.sun {
+    position: absolute;
+    height: 13%;
+    width: 13%;
+    border-radius: 50%;
+    background-color: #fee401;
+}

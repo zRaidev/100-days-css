@@ -1,0 +1,187 @@
+:root {
+  --bg-blue: #264057;
+  --aside-blue: #43627d;
+  --nav-blue: #5f98cd;
+  --icons-nav: #b2daff;
+  --icon-aside: #93b2cd;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: var(--bg-blue);
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+}
+
+header {
+  background: var(--nav-blue);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+i {
+  color: var(--icons-nav);
+}
+
+.aside-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.line-1__asd-bar {
+  height: 3px;
+  width: 28px;
+  background-color: var(--icons-nav);
+  margin: 4px;
+  border-radius: 20px;
+}
+
+.line-1__asd-bar::after {
+  content: "";
+  height: 7px;
+  width: 7px;
+  background-color: var(--icons-nav);
+  border-radius: 50%;
+  outline: solid 2.5px var(--nav-blue);
+  position: absolute;
+  top: 22px;
+  left: 46px;
+}
+
+
+.line-2__asd-bar {
+  height: 3px;
+  width: 28px;
+  background-color: var(--icons-nav);
+  margin: 4px;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.fa-magnifying-glass {
+  display: flex;
+  font-size: 19px;
+}
+
+
+.circle-1__asd-ntc {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: solid 2.9px var(--nav-blue);
+  outline: solid 2px #fff;
+  top: 22px;
+  left: 46px;
+}
+
+.circle-2__asd-ntc {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: solid 2.9px var(--nav-blue);
+  outline: solid 2px #fff;
+  top: 22px;
+  left: 46px;
+}
+
+.circle-3__asd-ntc {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: solid 2.9px var(--nav-blue);
+  outline: solid 2px #fff;
+  top: 22px;
+  left: 46px;
+}
+
+.notificatiton-board {
+  display: grid;
+  grid-template-columns: 0.9fr 6fr;
+}
+
+.aside__notifications {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  background-color: #3e3e3e;
+}
+
+.large-bar__asd-ntc {
+  height: 238px;
+  width: 3px;
+  background-color: #000;
+  position: absolute;
+  display: flex;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 36px 20px 8px;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 200;
+  color: #535353;
+}
+
+h2 {
+  font-size: 14.3px;
+  color: #535353;
+  font-weight: 500;
+}
+
+aside {
+  display: none;
+}
+
+/*NO LLEVA GRID, EN LA ANIMACION LOS CIRCULOS Y LAS NOTIS SE MUEVEN A LA PAR POR LO TANTO IRIA EN UN MISMO ESPACIO*/

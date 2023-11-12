@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: linear-gradient(231deg, #25ccff,#3c1c96);
+  color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.text {
+  color: #fff;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 50px;
+}
+h5 {
+  font-size: 18px;
+}
+
+.container {
+  height: 80px;
+}
+
+.cero {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 18px solid #fff;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  z-index: 6;
+}
+
+#cero-2 {
+  right: -8px;
+}
+
+#cero-1 {
+  left: 12%;
+  z-index: 10;
+}
+
+.uno-vertical {
+  height: 80px;
+  width: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 4px;
+  z-index: 20;
+  border-radius: 3px;
+}
+
+.shadow-1 {
+  -webkit-box-shadow: 3px 4px 19px -7px rgba(0,0,0,0.55);
+  -moz-box-shadow: 3px 4px 19px -7px rgba(0,0,0,0.55);
+  box-shadow: 3px 4px 19px -7px rgb(0, 0, 0);
+}
+
+.uno-diagonal {
+  width: 16px;
+  background-color: #fff;
+  height: 34px;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  left: -8px;
+}
