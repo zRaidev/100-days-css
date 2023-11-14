@@ -78,9 +78,22 @@ i {
   color: #666;
   outline: none;
   display: none;
+  opacity: 0;
 }
 
+.search-bar.active {
+  display: block;
+  animation: searchAppears .8s forwards;
+}
 
+@keyframes searchAppears {
+  0% {display: block; opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes searchDisappears {
+  0% {opacity: 1;}
+  100% {opacity: 0; display: none;}
+}
 
 .aside-bar {
   display: flex;

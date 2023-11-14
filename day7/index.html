@@ -64,15 +64,16 @@
   <script>
     const searchIcon = document.querySelector(".fa-magnifying-glass");
     const searchBar = document.querySelector(".search-bar");
-      
+
     searchIcon.addEventListener("click", ()=>{
       if (searchBar.classList.contains("active")){
-        
+        searchBar.style.animation = `searchDisappears .8s forwards`;
+        searchBar.classList.remove("active");
       } else {
-
+        searchBar.style.animation = `searchAppears .8s forwards`;
+        searchBar.classList.add("active");
       }
     })
-  
   </script>
 </body>
 
