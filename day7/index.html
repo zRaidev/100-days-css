@@ -23,7 +23,7 @@
           </div>
           <h1>Notifications</h1>
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search ..." class="search-bar">
+          <input type="text" placeholder="Search..." class="search-bar">
         </header>
         <div class="notification-board">
           <div class="left-board"></div>
@@ -60,6 +60,20 @@
       </aside>
     </div>
   </div>
+  <!--I TRIED TO DO IT WITHOUT JS BUT I COULD NOT BECAUSE OF THE ANIMATIONS-->
+  <script>
+    const searchIcon = document.querySelector(".fa-magnifying-glass");
+    const searchBar = document.querySelector(".search-bar");
+      
+    searchIcon.addEventListener("click", ()=>{
+      if (searchBar.classList.contains("active")){
+        
+      } else {
+
+      }
+    })
+  
+  </script>
 </body>
 
 </html>
