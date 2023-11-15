@@ -67,9 +67,13 @@
 
     searchIcon.addEventListener("click", ()=>{
       if (searchBar.classList.contains("active")){
-        searchBar.style.animation = `searchDisappears .8s forwards`;
+        searchBar.style.animation = `searchDisappears 1s forwards`;
+        searchBar.addEventListener("animationend", ()=> {
+          searchBar.style.display = "none"
+        },{once: true});
         searchBar.classList.remove("active");
       } else {
+        searchBar.style.display = "block";
         searchBar.style.animation = `searchAppears .8s forwards`;
         searchBar.classList.add("active");
       }
